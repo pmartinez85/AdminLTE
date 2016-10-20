@@ -15,5 +15,11 @@ require('laravel-elixir-vue-2');
 
 elixir(mix => {
     mix.sass('app.scss')
-       .webpack('app.js');
+        .less('app1.less')
+        .less('./node_modules/admin-lte/build/less/AdminLTE.less', './public/css/ad/AdminLTE.css')
+        .styles([
+        './public/css/app.css',
+        './public/css/ad/AdminLTE.css'
+    ])
+       .webpack('app.js')
 });
